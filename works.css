@@ -1,0 +1,73 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.Section_top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 20s infinite ease-in-out;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+
+}
+.content h1{
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+.content h1 span{
+    color: #111;
+}
+.content a{
+    background: yellow;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.content a:hover{
+    background: goldenrod;
+    color: #fff;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url(https://www.eastcoastdaily.in/wp-content/uploads/2018/08/onam.jpg);
+    }
+    20%
+    {
+        background-image: url(https://th.bing.com/th/id/OIP.IT3s9UEtDN52B0nLEY2BqAHaE9?pid=ImgDet&rs=1);
+    }
+    40%
+    {
+        background-image: url(https://theshillongtimes.com/wp-content/uploads/2022/09/ONAM-P-4-scaled.jpg);
+    }
+    60%
+    {
+        background-image: url(https://images.thequint.com/thequint/2016-09/8004558e-e1d0-44ca-87ea-2e601e0ed070/OnamSadya1.jpg?rect=4%2C0%2C1820%2C1024&auto=format%2Ccompress&fmt=webp&w=1200);
+    }
+    80%
+    {
+        background-image: url(https://www.adotrip.com/public/images/festivals/5c3dc568b68fa-Pulikali%20Package%20Tour.jpg);
+    }
+    100%
+    {
+        background-image: url(https://3.bp.blogspot.com/-JrQFg-_aL0E/T2Gt-msE78I/AAAAAAAAB98/Pn8-XqJgJOs/s1600/thiruvathirakali.jpg);
+    }
+}

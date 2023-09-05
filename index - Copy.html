@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="para.css">
+</head>
+<body>
+    <section class="section1">
+        <img src="https://th.bing.com/th/id/OIP.Np0t_IvFYMLwWAMDvgP5mgHaE8?pid=ImgDet&rs=1" alt="bg" id="bg">
+        <div class="glowing-sun" id="moon"></div>
+        
+        <img src="mount.png" alt="bg" id="mountain1">
+        <img src="river.png" alt="bg" id="road">
+        <div class="text" id="text">
+            <h2 contenteditable="true">I am MAVELI</h2>
+        </div>
+        <div class="scroll-down"> </div>
+        <svg>
+            <filter id="fire">
+                <feTurbulence id="turbulance" baseFrequency="0.1 0.1" numOctaves="2" seed="3">
+                    <animate attributeName="baseFrequency" dur="10s" values="0.1 0.1;0.12 0.3" repeatCount="indefinite"></animate>
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="25"></feDisplacementMap>
+            </filter>
+        </svg>
+    </section>
+    <section class="section2">
+        <!--<ul>
+            <li><a href="http://">ABOUT</a></li>
+            <li><a href="http://">WORKS</a></li>
+            <li><a href="http://">EXPERIANCE</a></li>
+            <li><a href="http://">CONNECT</a></li>
+        </ul>-->
+        <div class="ul">
+        <div class="hoveru2">
+            <div class="about__left about__mail"><a href="about.html">ABOUT</a></div>
+        </div>
+        <div class="hoveru2">
+            <div class="about__left about__mail"><a href="#">EXPERIANCE</a></div>
+        </div>
+        <div class="hoveru2">
+            <div class="about__left about__mail"><a href="works.html">WORKS</a></div>
+        </div>
+        <div class="hoveru2">
+            <div class="about__left about__mail"><a href="#">CONNECT</a></div>
+        </div>
+    </div>
+      
+        
+    
+        
+    </section>
+    
+    
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg")
+        let moon = document.getElementById("moon")
+        let mountain = document.getElementById("mountain")
+        let road = document.getElementById("road")
+        let text = document.getElementById("text")
+        let text2 = document.getElementById("text2")
+
+
+        window.addEventListener('scroll',function(){
+            var value = window.scrollY;
+
+            bg.style.top = value*0.5+'px';
+            moon.style.top = -value*0.5+'px';
+            mountain1.style.top = value*0.15+'px';
+            road.style.top = value*0.15+'px';
+            text.style.top = value*1+'px';})
+
+            function checkForVisibility() {
+                var headers = document.querySelectorAll(".header1");
+                headers.forEach(function(header1) {
+                  if (isElementInViewport(header1)) {
+                    header1.classList.add("header1Visible");
+                  } else {
+                    header1.classList.remove("header1Visible");
+                  }
+                });
+              }
+              
+              
+              function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+              
+                return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <=
+                    (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+              
+              if (window.addEventListener) {
+                addEventListener("DOMContentLoaded", checkForVisibility, false);
+                addEventListener("load", checkForVisibility, false);
+                addEventListener("scroll", checkForVisibility, false);
+              }
+              
+              
+              
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>
